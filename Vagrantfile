@@ -8,27 +8,54 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # All Vagrant configuration is done here. The most common configuration
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
-
   # Every Vagrant virtual environment requires a box to build off of.
+  
+  #all machines use this image as base	
+  config.vm.box = "puppet-labs-centos-65-nocm"
   
   # 1cpu, 256MB Ram	
   config.vm.define "min" do |min|
+     min.vm.provider "virtualbox" do |vb|
+		#vb.gui = true
+		vb.customize ["modifyvm", :id, "--memory", "256"]
+		vb.customize ["modifyvm", :id, "--cpus", "1"]
+	 end
   end 
   
   # 2cpu, 512MB Ram
-  config.vm.define "medium" do |min|
+  config.vm.define "medium" do |medium|
+    medium.vm.provider "virtualbox" do |vb|
+		#vb.gui = true
+		vb.customize ["modifyvm", :id, "--memory", "512"]
+		vb.customize ["modifyvm", :id, "--cpus", "2"]
+	 end
   end 
   
   # 2cpu, 1024MB Ram
-  config.vm.define "large" do |min|
+  config.vm.define "large" do |large|
+    large.vm.provider "virtualbox" do |vb|
+		#vb.gui = true
+		vb.customize ["modifyvm", :id, "--memory", "1024"]
+		vb.customize ["modifyvm", :id, "--cpus", "2"]
+	 end
   end 
   
   # 2cpu, 2048MB Ram
-  config.vm.define "xlarge" do |min|
+  config.vm.define "xlarge" do |xlarge|
+    xlarge.vm.provider "virtualbox" do |vb|
+		#vb.gui = true
+		vb.customize ["modifyvm", :id, "--memory", "2048"]
+		vb.customize ["modifyvm", :id, "--cpus", "2"]
+	 end
   end 
   
   # 4cpu, 4096MB Ram
-  config.vm.define "xxlarge" do |min|
+  config.vm.define "xxlarge" do |xxlarge|
+    xxlarge.vm.provider "virtualbox" do |vb|
+		#vb.gui = true
+		vb.customize ["modifyvm", :id, "--memory", "4096"]
+		vb.customize ["modifyvm", :id, "--cpus", "4"]
+	 end
   end 
   
 
