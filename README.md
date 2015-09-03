@@ -1,2 +1,4 @@
 vagrant-multi-machine
 =====================
+
+test
