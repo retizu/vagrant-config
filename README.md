@@ -9,11 +9,17 @@ vagrant plugin install vagrant-cachier
 ### Vagrant basics
 
 ``` bash
-vagrant init
-vagrant up
-vagrant halt
-vagrant destroy
-vagrant reload
+vagrant box add [title] [url]   # donwload a new box from url and give it a tile
+vagrant box list                # list available boxes, take returned name and put it it your Vagrantfile under config.vm.box
+vagrant init                    # generate a default Vagrantfile in the current directory
+vagrant up                      # bring up a vm, it boots it up or it provisions it 
+vagrant halt                    # stop a machine
+vagrant destroy                 # destroy a machine (but doesn't remove the directory)
+vagrant reload                  # reload configs from the Vagrant file (accompanied by a halt and up)
+vagrant plugin install [plugin-name]    # install a certain plugin 
+vagrant plugin list                     # list available plugins 
+vagrant ssh-config                      # displays parameters used by vagrant ssh (mostly interesting if you don't know the path to your IdentityFile (that holds the vagrant ssh key)
+vagrant ssh                     # under linux or cygwin it connects to the box via ssh using the ssh key (get the path to it from above)
 ```
 
 
