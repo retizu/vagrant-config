@@ -1,4 +1,4 @@
-vagrant-multi-machine
+Getting started with vagrant 
 =====================
 
 ``` bash
