@@ -8,9 +8,9 @@ vagrant plugin install vagrant-cachier
 ```
 
 ### Vagrant boxes repositories
-[HasiCorp Atlas](https://atlas.hashicorp.com/boxes/search)
-[Vagrantbox.es](http://www.vagrantbox.es/)
-[Modern.ie Windows boxes](http://dev.modern.ie/tools/vms/windows/)
+* [HasiCorp Atlas](https://atlas.hashicorp.com/boxes/search)
+* [Vagrantbox.es](http://www.vagrantbox.es/)
+* [Modern.ie Windows boxes](http://dev.modern.ie/tools/vms/windows/)
 
 Get the links from the sites above an add them to your vagrant instalation by issuing the "Vagrant add command". (Beginners tip: you set the title) 
 
